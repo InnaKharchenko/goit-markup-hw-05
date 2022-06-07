@@ -413,6 +413,7 @@ h1, h2, h3, p {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-contacts {
   margin-right: 70px;
