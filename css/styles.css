@@ -13,7 +13,7 @@
   --accent-bg-color: #f5f4fa;
   --img-bg-color: rgba(47, 48, 58, 0.8);
   --card-bg-color: rgba(33, 150, 243, 0.9);
-  --modal-bg-color: rgba(0, 0, 0, 0.2)
+  --modal-bg-color: rgba(0, 0, 0, 0.2);
 
   /*border color*/
   --border-color: #ececec;
@@ -240,6 +240,7 @@ p {
   width: 100%;
   height: 100%;
   z-index: 100;
+  opacity: 1;
   background-color: var(--modal-bg-color);
   transition: opacity var(--slow-anim), visibility var(--slow-anim);
 }
