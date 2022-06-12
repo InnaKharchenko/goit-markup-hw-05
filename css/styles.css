@@ -31,7 +31,7 @@
 body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
-  letter-spacing: 0, 03em;
+  letter-spacing: 0.03em;
   background-color: var(--second-accent-text-color);
   color: var(--main-text-color);
 }
@@ -358,19 +358,14 @@ p {
   bottom: 0;
   left: 0;
 
-  content: '';
-  display: block;
+  display: flex;
   width: 100%;
 
-  padding-top: 27px;
-  padding-bottom: 27px;
-  /*heidht: 70px;
+  height: 70px;
   justify-content: center;
-  align-items: center;*/
-  text-align: center;
+  align-items: center;
   font-weight: 700;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-accent-text-color);
   background-color: var(--img-bg-color);
@@ -461,8 +456,7 @@ p {
   height: 44px;
   background-color: var(--second-accent-text-color);
   border-radius: 50%;
-  transition: color var(--slow-anim), background-color var(--slow-anim),
-    border-radius var(--slow-anim);
+  transition: background-color var(--slow-anim);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -667,7 +661,7 @@ p {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
+
 }
 
 /*Card-section*/
@@ -727,10 +721,21 @@ p {
 .portfolio-overlay {
   position: relative;
   overflow: hidden;
+  transition: overflow var(--slow-anim);
 }
-.portfolio-link:hover .portfolio-text {
+
+.portfolio-overlay:hover,
+.portfolio-overlay:focus {
+  overflow: visible;
+
+}
+
+.portfolio-link:hover .portfolio-text,
+.portfolio-link:focus .portfolio-text{
   transform: translateY(0);
+  
 }
+
 .portfolio-text {
   position: absolute;
   top: 0;
